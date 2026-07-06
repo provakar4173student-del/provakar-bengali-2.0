@@ -1733,13 +1733,13 @@ const App = {
 
     // Reset progress
     resetProgress() {
-            if (confirm('আপনি কি নিশ্চিত যে আপনি সমস্ত প্রগতি মুছে দিতে চান? এই অপারেশনটি পূর্বাবস্থায় ফেরানো যাবে না।')) {
-            Storage.clearAll();
-            Storage.init();
-            this.showNotification('সমস্ত প্রগতি রিসেট করা হয়েছে!', 'success');
-            setTimeout(() => location.reload(), 1000);
-        }
-    },
+    if (confirm('আপনি কি নিশ্চিত যে আপনি সমস্ত প্রগতি মুছে দিতে চান? এই অপারেশনটি আর ফিরিয়ে আনা যাবে না।')) {
+        Storage.clearAll();
+        Storage.init();
+        this.showNotification('সমস্ত প্রগতি রিসেট করা হয়েছে!', 'success');
+        setTimeout(() => location.reload(), 1000);
+    }
+},
 
     // Show notification
     showNotification(message, type = 'info') {
