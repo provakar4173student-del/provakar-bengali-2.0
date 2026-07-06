@@ -148,7 +148,6 @@ body {
     background-color: var(--bg-secondary);
     transition: background-color var(--transition-base), color var(--transition-base);
 }
-
 a {
     text-decoration: none;
     color: var(--primary-color);
